@@ -28,7 +28,7 @@ check_branch
 
 Current_path="$(pwd)"
 
-cd /home/uzmah
+cd
 code="$(ls)"
 folder="src"
 cd $Current_path
@@ -48,8 +48,8 @@ cd ~/src/fancy_tools
 New_path="$(pwd)"
 file=$(<~/.bashrc)
 
-file_aliases="source $Current_path/.aliases"
-file_fancy="source $Current_path/fancy_functions.sh"
+file_aliases="source $New_path/.aliases"
+file_fancy="source $New_path/fancy_functions.sh"
 
 if [[ "$file" == *"$file_aliases"* ]]
 then
@@ -79,7 +79,7 @@ else
 	fi
 fi
 
-cd /home/uzmah
+cd
 code="$(ls)"
 folder="bin"
 cd $New_path
