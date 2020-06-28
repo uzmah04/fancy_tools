@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# Fonction -> ecrire dans un fichier
 function write_to_file
 {
         if [[ -r"$2" && -w"$2" ]]
@@ -11,6 +12,7 @@ function write_to_file
         fi
 }
 
+# Fonction -> verifier sur quel branch on est
 function check_branch
 {
 	Current_branch="$(git rev-parse --abbrev-ref HEAD)"
@@ -28,6 +30,7 @@ check_branch
 
 Current_path="$(pwd)"
 
+# Verifier si on a un dossier src ou pas dans le home et cloner le repertoire
 cd
 code="$(ls)"
 folder="src"
@@ -52,6 +55,7 @@ else
         echo "src/fancy_tools created"
 fi
 
+# Sourcer .aliases et fancy_functions.sh par le .bashrc
 cd ~/src/fancy_tools
 New_path="$(pwd)"
 file=$(<~/.bashrc)
@@ -87,6 +91,7 @@ else
 	fi
 fi
 
+# Verifier si on a un dossier bin ou pas dans le home et copier le updateFancyTools dedans
 cd
 code="$(ls)"
 folder="bin"
@@ -103,6 +108,7 @@ else
 	echo "bin/updateFancyTools created"
 fi
 
+# Ajouter le dossier bin au PATH
 cd ~/bin
 bin_path="$(pwd)"
 export_path="export PATH=$PATH:$bin_path"

@@ -1,6 +1,6 @@
 cd ~/src/fancy_tools
 
-#Check branch
+# Verifier branch
 
 Branch="$(git rev-parse --abbrev-ref HEAD)"
 
@@ -8,14 +8,14 @@ if [[ "$Branch" == "master" ]]
 then
 	echo "On branch master"
 
-	#update whole repository
+	# Mettre a jour le repertoire
 	git fetch --all
 	git checkout origin/master -- .aliases
 	git checkout origin/master -- fancy_functions.sh
 	git checkout origin/master -- install.sh
 	git checkout origin/master -- bin/updateFancyTools
 
-	#copy updateFancyTools to ~/bin
+	# Copier updateFancyTools dans ~/bin
 	cp ~/src/fancy_tools/bin/updateFancyTools ~/bin
 
 	echo "** Done **"
@@ -24,14 +24,14 @@ else
 	git checkout master
 	echo "Now on branch master"
 
-        #update whole repository
+        # Mettre a jour le repertoire
         git fetch --all
         git checkout origin/master -- .aliases
         git checkout origin/master -- fancy_functions.sh
         git checkout origin/master -- install.sh
         git checkout origin/master -- bin/updateFancyTools
 
-        #copy updateFancyTools to ~/bin
+        # Copier updateFancyTools dans ~/bin
         cp ~/fancy_tools/bin/updateFancyTools ~/bin
 
         echo "** Done **"

@@ -1,3 +1,4 @@
+# Fonction -> git commit
 function gco
 {
         # verifie si on est dans un projet git
