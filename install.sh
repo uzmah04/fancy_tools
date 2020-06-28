@@ -31,16 +31,23 @@ Current_path="$(pwd)"
 cd
 code="$(ls)"
 folder="src"
-cd $Current_path
 if [[ "$code" == *"$folder"* ]]
 then
-        cd ..
-        cp -r fancy_tools ~/src/fancy_tools
-        echo "src/fancy_tools successful"
+        cd src
+
+	Check_content="$(ls)"
+	repo="fancy_tools"
+	if [[ "$Check_content" == *"$fancy_tools"* ]]
+	then
+		echo "src/fancy_tools present"
+	else
+		git clone https://github.com/uzmah04/fancy_tools.git
+		echo "src/fancy_tools successful"
+
 else
         mkdir ~/src
-	cd ..
-        cp -r fancy_tools ~/src/fancy_tools
+	cd src
+        git clone https://github.com/uzmah04/fancy_tools.git
         echo "src/fancy_tools created"
 fi
 
