@@ -1,5 +1,4 @@
-cd ~/src/fancy_tools/bin
-./updateFancyTools
+cd ~/src/fancy_tools
 
 Branch="$(git rev-parse --abbrev-ref HEAD)"
 
