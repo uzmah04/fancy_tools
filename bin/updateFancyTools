@@ -5,19 +5,15 @@ Branch="$(git rev-parse --abbrev-ref HEAD)"
 if [[ "$Branch" == "master" ]]
 then
 	echo "On branch master"
-	git add .
-	git commit -m "[$Branch] $*"
-	git merge
-	git push origin master
+	git fetch --all
+	git checkout origin/master -- bin/updateFancyTools
 	echo "** Done **"
 
 else
 	git checkout master
 	echo "Now on branch master"
-        git add .
-        git commit -m "[$Branch] $*"
-        git merge
-        git push origin master
+        git fetch --all
+        git checkout origin/master -- bin/updateFancyTools
         echo "** Done **"
 
 fi
