@@ -11,7 +11,7 @@ Fichier .aliases contient les alias.
 
 Fancy_functions.sh contient les fonctions.
 
-Le fichier install.sh, une fois l'installation terminée, les utilisateurs pouront servir les alias et les fonctions.
+Le fichier install.sh, une fois l'installation terminée, les utilisateurs pouront s'en servir des alias et des fonctions.
 
 Pour mettre à jour cet outil, il faut lancer le fichier updateFancyTools.
 
@@ -29,7 +29,7 @@ Pour mettre à jour cet outil, il faut lancer le fichier updateFancyTools.
  ```sh
         $ ./install.sh
 ```
- - Vous pouvez maintenant vous servir de vos alias et fonctions.
+ - Vous pouvez maintenant vous utiliser vos alias et fonctions.
 > Exemple:
 Le fonction gco est pour le git commit. Le code est comme suite:
 
