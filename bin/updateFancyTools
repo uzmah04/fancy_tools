@@ -1,3 +1,6 @@
+cd ~/src/fancy_tools/bin
+./updateFancyTools
+
 Branch="$(git rev-parse --abbrev-ref HEAD)"
 
 if [[ "$Branch" == "master" ]]

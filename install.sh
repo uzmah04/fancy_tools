@@ -43,6 +43,7 @@ then
 	else
 		git clone https://github.com/uzmah04/fancy_tools.git
 		echo "src/fancy_tools successful"
+	fi
 
 else
         mkdir ~/src
