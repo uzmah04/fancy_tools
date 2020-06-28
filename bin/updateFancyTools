@@ -6,6 +6,9 @@ if [[ "$Branch" == "master" ]]
 then
 	echo "On branch master"
 	git fetch --all
+	git checkout origin/master -- .aliases
+	git checkout origin/master -- fancy_functions.sh
+	git checkout origin/master -- install.sh
 	git checkout origin/master -- bin/updateFancyTools
 	echo "** Done **"
 
@@ -13,6 +16,9 @@ else
 	git checkout master
 	echo "Now on branch master"
         git fetch --all
+        git checkout origin/master -- .aliases            
+        git checkout origin/master -- fancy_functions.sh
+        git checkout origin/master -- install.sh  
         git checkout origin/master -- bin/updateFancyTools
         echo "** Done **"
 
